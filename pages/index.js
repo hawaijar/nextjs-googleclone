@@ -1,7 +1,9 @@
 import Head from "next/head";
 import Avatar from "../components/Avatar";
-import { ViewGridIcon } from "@heroicons/react/solid";
-// import Image from "next/image";
+import { MicrophoneIcon, ViewGridIcon } from "@heroicons/react/solid";
+import { SearchIcon } from "@heroicons/react/outline";
+
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -27,6 +29,22 @@ export default function Home() {
         </div>
       </header>
       {/* Body */}
+      <form className="flex flex-col items-center mt-44 flex-grow">
+        <Image
+          src="https://www.google.com/logos/doodles/2021/get-vaccinated-wear-a-mask-save-lives-september-3-copy-6753651837109329-law.gif"
+          width="350"
+          height="170"
+        />
+        <div className="flex w-full mt-5 hover:shadow-lg focus-within:shadow-lg rounded-full border border-gray-200 px-5 py-3 items-center">
+          <SearchIcon className="h-5 text-gray-500 max-w-md sm:max-w-xl md:max-w-xl lg:max-w-2xl" />
+          <input type="text" className="focus:outline-none flex-grow px-4" />
+          <MicrophoneIcon className="h-5" />
+        </div>
+        <div className="flex flex-col w-1/2 space-y-2 justify-center mt-8 sm:flex-row sm:space-x-4 sm:space-y-0">
+          <button className="btn">Google Search</button>
+          <button className="btn">I'm Feeling Lucky</button>
+        </div>
+      </form>
       {/* Footer */}
     </div>
   );
