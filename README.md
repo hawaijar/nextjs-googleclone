@@ -23,10 +23,10 @@ These two keys need to store in _.env_ file and  hence you won't find it on this
 
 ### First main page
 ![](images/main.png)
-
+<br>
 ### Search  page
 ![](images/result.png)
-
+<br>
 ### Pagination section
 ![](images/pagination.png)
 # nextjs-googleclone
