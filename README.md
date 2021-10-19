@@ -12,7 +12,7 @@ npm run dev
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
 
 Before you start searching (using Google API), there are two steps that you need to do -
 - Google API key (https://developers.google.com/custom-search/v1/introduction#identify_your_application_to_google_with_api_key
@@ -22,6 +22,11 @@ Before you start searching (using Google API), there are two steps that you need
 These two keys need to store in _.env_ file and  hence you won't find it on this repo.
 
 * Google API (developer) has a quota of 10 API calls per day and hence there is _an internal variable (useDummyData) to avoid this quota limit_.
+
+
+Once you're done with the setting of above two keys in the .env file,
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 ### First main page
 ![](images/main.png)
