@@ -1,5 +1,6 @@
 import React from "react";
 import SearchResultItem from "./SearchResultItem";
+import PaginationButtons from "./PaginationButtons";
 
 const SearchResult = ({ results }) => {
   const { searchInformation } = results;
@@ -12,6 +13,8 @@ const SearchResult = ({ results }) => {
       {results.items.map((item) => (
         <SearchResultItem key={item.link} {...item} />
       ))}
+      {/*Pagination buttons*/}
+      <PaginationButtons />
     </div>
   );
 };
