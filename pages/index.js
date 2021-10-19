@@ -49,6 +49,7 @@ export default function Home() {
           src="https://www.google.com/logos/doodles/2021/get-vaccinated-wear-a-mask-save-lives-september-3-copy-6753651837109329-law.gif"
           width="350"
           height="170"
+          alt={"Google photo"}
         />
         <div className="flex w-full mt-5 hover:shadow-lg focus-within:shadow-lg rounded-full border border-gray-200 px-5 py-3 items-center">
           <SearchIcon
@@ -66,7 +67,7 @@ export default function Home() {
           <button onClick={search} className="btn">
             Google Search
           </button>
-          <button className="btn">I'm Feeling Lucky</button>
+          <button className="btn">{`I'm Feeling Lucky`}</button>
         </div>
       </form>
       {/* Footer */}
