@@ -1,19 +1,24 @@
 import Head from "next/head";
 import Header from "../components/Header";
 import ResponseData from "../data";
+import { useRouter } from "next/router";
+import SearchResult from "../components/SearchResult";
+
 function Search({ results }) {
   console.log(results);
+  const router = useRouter();
   return (
     <div>
       <div>
         <Head>
-          <title>Search results</title>
+          <title>{`${router.query.term} - Google Search`}</title>
           <link rel="icon" href="https://www.google.com/favicon.ico" />
         </Head>
 
         {/* header */}
         <Header />
         {/* search result */}
+        <SearchResult results={results} />
       </div>
     </div>
   );
@@ -29,7 +34,8 @@ const { API_KEY, CONTEXT_KEY } = process.env;
 // NextJS specific SSR directive(s)
 export async function getServerSideProps(context) {
   const useDummyData = true;
-  const URL = `${SEARCH_API}?key=${API_KEY}&cx=${CONTEXT_KEY}&q=${context.query.term}`;
+  const startIndex = context.query.start || "0";
+  const URL = `${SEARCH_API}?key=${API_KEY}&cx=${CONTEXT_KEY}&q=${context.query.term}&start=${startIndex}`;
   const data = useDummyData
     ? ResponseData
     : await fetch(URL).then((response) => response.json());

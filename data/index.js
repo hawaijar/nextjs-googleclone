@@ -26,7 +26,7 @@ const data = {
   searchInformation: {
     searchTime: 0.598941,
     formattedSearchTime: "0.60",
-    totalResults: "10",
+    totalResults: "5,27,00,000",
     formattedTotalResults: "10",
   },
   items: [
