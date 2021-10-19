@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@heroicons/react": "^1.0.4",
+    "dotenv": "^10.0.0",
     "next": "11.1.2",
     "prettier": "^2.4.1",
     "react": "17.0.2",
